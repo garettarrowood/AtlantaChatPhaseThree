@@ -1,0 +1,16 @@
+<h1>AtlantaChat</h1>
+
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<form>
+  <label>Type message:</label>
+  <br />
+  <input id="message" type="text"></input>
+  <input type="submit"></input>
+</form>
+
+<script>$(document).ready(roomReady);</script>
